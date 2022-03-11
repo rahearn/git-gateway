@@ -1,5 +1,14 @@
 # git-gateway - Gateway to hosted git APIs
 
+## Local Use in Docker:
+
+1. `docker build -t nih-git-gateway`
+1. `docker run -e GITGATEWAY_JWT_SECRET="value from rails credentials:show" -e GITGATEWAY_GITHUB_ACCESS_TOKEN="your personal access token" -e GITGATEWAY_GITHUB_REPO="org/repo" nih-git-gateway`
+
+## Deploy to cloud.gov
+
+Set config options in `.env` file
+
 **Secure role based access to the APIs of common Git Hosting providers.**
 
 When building sites with a JAMstack approach, a common pattern is to store all content as structured data in a Git repository instead of relying on an external database.

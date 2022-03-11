@@ -1,0 +1,12 @@
+---
+applications:
+- name: nih_oite_experiments-staging-gateway
+  buildpacks:
+    - go_buildpack
+  routes:
+  - route: nih_oite_experiments-staging-gateway.apps.internal
+  processes:
+  - type: web
+    instances: 1
+    memory: 256M
+    command: git-gateway
